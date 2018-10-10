@@ -68,7 +68,7 @@ def neutral_modes_from_N2_profile(z, N2, f0, depth=None, **kwargs):
         ----------
         z : array_like
             The depths at which N2 is given. Starts shallow, increases
-            positive downward.
+            positive downward. First Z value can not be 0, as it is the point at which the gradient is calculated.
         N2 : array_like
             The squared buoyancy frequency (units s^-2). Points below topography
             should be masked or nan.
